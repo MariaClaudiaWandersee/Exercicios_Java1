@@ -14,11 +14,11 @@ public class SistemaPadaria {
     Receita receitaDois = new Receita(165987, "Frango Grelhado", "Pegue um peito de frango e tempere a gosto, em seguida leva uma frigideira ao fogo com um pouco de margarina ou manteiga, deixa ela derreter, e após adicione o frango a frigdeira. Doure ambos os lados e retire quando chegar no ponto em que você deseja.", 8);
     Receita receitaTres = new Receita(165987, "Batata Souté", "Pegue 10 batatas pequenas e descasque. Em uma panela com água fervente, adicone as batatas e uma pitada de sal, e deixe cozinhar por 10 minutos. Elas deveram ficar pré-cozinhdas. Em uma frigideira, derrata manteiga ou mararina e adicone as batatas e deixe dourar. Tempere com sal, pimenta e salpique salsa. ", 12);
     Receita receitaQuatro = new Receita(156257,"Quibe","Colocar o quibe pré-frito no air-fryer.",1);
-    Receita receitaCinco = new Receita(158456,"Pão de Queijo","Colocar o pão de queijo pré-pronto no forno.",1);
-    Receita receitaSeis = new Receita(147925,"Misto Quente","Passe a margarina em ambas as fatias de pão, recheie e coloque em uma assadeira",3);
+    Receita receitaCinco = new Receita(158456,"Pão de Queijo","Utilize 800g de polvilho azedo, uma xícara de leite, meia xícara de olho, 2 ovos e 100g de queijo parmesão ralado. Misture tudo em uma bawn, faça bolinhas e coloque para assar.",3);
+    Receita receitaSeis = new Receita(147925,"Misto Quente","Passe a margarina em ambas as fatias de pão, adicone duas fatias de quiejo, uma em cada fatia e por fim, coloque uma fatia de presunto, e depois coloque em uma misteira",4);
     Receita receitaSete = new Receita(111555,"Pastel","Prepare a massa e o recheio, e coloque na fritadeira",3);
     Receita receitaOito = new Receita(147890,"Pão Frances","Prepare a massa e deixe assando no forno",9);
-    Receita receitaNove = new Receita(154789,"Bolo de morango","Prepare a massa e deixe o bolo assando no forno",10);
+    Receita receitaNove = new Receita(154789,"Bolo de morango","Pegue a massa pronta de chocolate ou o sabor de sua preferência, adicone 2 ovos, uma xícara de leite e uma colher de chá de fermento em pó para bolo. Unte uma forma média, e deixe o bolo assando no forno em aproximadamente 250° por 30 minutos",7);
 
     chefUm.adicionarReceita(receitaUm);
     chefUm.adicionarReceita(receitaDois);
