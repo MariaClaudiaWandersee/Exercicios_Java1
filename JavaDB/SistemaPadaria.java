@@ -1,4 +1,3 @@
-
 //Ps: em alguns arquivos decidi tirar os 'Private' de alguns arrays, pois estava dando erro no SistemaPadaria.
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -484,7 +483,7 @@ public class SistemaPadaria {
                     case 3:             
                                         //Clientes
                                         Connection conn = DriverManager.getConnection(url, user, password);
-                                        PreparedStatement preparedStatement4 = con.prepareStatement(
+                                        PreparedStatement preparedStatement4 = conn.prepareStatement(
                                                 "SELECT * FROM Cliente");
                                         ResultSet result = preparedStatement4.executeQuery();
                                         while (result.next()) {
@@ -508,12 +507,12 @@ public class SistemaPadaria {
                                         while (result.next()) {
                                             System.out.printf(" - Impressão dos Chefs ");
                                             Chef chef = new Chef(
-                                                result.getInt("IdChef"),
-                                                result.getString("nome"),
-                                                result.getString("cpf"),
-                                                result.getDate("dataNascimento"),
-                                                result.getString("cargo"),
-                                                result.getString("especialidade"));
+                                                resultS.getInt("IdChef"),
+                                                resultS.getString("nome"),
+                                                resultS.getString("cpf"),
+                                                resultS.getDate("dataNascimento"),
+                                                resultS.getString("cargo"),
+                                                resultS.getString("especialidade"));
                                             System.out.println(chef);
                                         }
                                         System.out.printf(" \n");
@@ -530,6 +529,7 @@ public class SistemaPadaria {
                                 "Na esquina com a casa da Dona Maria", "89567-999", "Rua do Brigadeiro", 222,
                                 "Aventureiro", "Joinville");
 
+
                         Mercado mercadoUm = new Mercado(400, "Angeloni", "01/01/1998",
                                 "Carnes em promoção", "1935", "89204-080",
                                 "Rua João Colin", 2800, "Saguaçu", "Joinville-SC");
@@ -539,6 +539,7 @@ public class SistemaPadaria {
                         Mercado mercadoTres = new Mercado(600, "Condor", "11/08/2000",
                                 "Frutas em promoção", "8922", "89278-020",
                                 "Rua Blumenau", 715, "Atiradores", "Joinville-SC");
+
 
                         Receita receitaUm = new Receita("165987", "Miojo",
                                 "Colocar a água ferver, tirar o macarrão da embalagem e colocar o miojo na panela com água fervente. Após, retire da panela quando estiver no ponto mais macio, e sirva",
@@ -589,6 +590,7 @@ public class SistemaPadaria {
                         Receita receitaDezoito = new Receita("158899",
                                 "Sanduíche gelado de presunto e queijo",
                                 "Prepare o pão, corte duas fatias, e recheie", 5, "R$4,75");
+
 
                         padariaUm.adicionarReceita(receitaUm);
                         padariaUm.adicionarReceita(receitaDois);
