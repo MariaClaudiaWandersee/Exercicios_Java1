@@ -504,7 +504,7 @@ public class SistemaPadaria {
                                                 "SELECT * FROM Chef");
                                     
                                         ResultSet resultS = preparedStatement5.executeQuery();
-                                        while (result.next()) {
+                                        while (resultS.next()) {
                                             System.out.printf(" - Impressão dos Chefs ");
                                             Chef chef = new Chef(
                                                 resultS.getInt("IdChef"),
