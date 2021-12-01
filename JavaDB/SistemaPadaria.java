@@ -1,3 +1,4 @@
+
 //Ps: em alguns arquivos decidi tirar os 'Private' de alguns arrays, pois estava dando erro no SistemaPadaria.
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -480,7 +481,43 @@ public class SistemaPadaria {
                         }
                         break;
 
-                    case 3:
+                    case 3:             
+                                        //Clientes
+                                        Connection conn = DriverManager.getConnection(url, user, password);
+                                        PreparedStatement preparedStatement4 = con.prepareStatement(
+                                                "SELECT * FROM Cliente");
+                                        ResultSet result = preparedStatement4.executeQuery();
+                                        while (result.next()) {
+                                            System.out.printf(" - Impressão dos Clientes ");
+                                            Cliente cliente = new Cliente(
+                                                result.getInt("IdCliente"),
+                                                result.getString("nome"),
+                                                result.getString("cpf"),
+                                                result.getDate("dataNascimento"),
+                                                result.getString("telefone"));
+                                            System.out.println(cliente);
+                                        }
+                                        System.out.printf(" \n");
+
+                                        //Chefs
+                                        //Connection conne = DriverManager.getConnection(url, user, password);
+                                        PreparedStatement preparedStatement5 = con.prepareStatement(
+                                                "SELECT * FROM Chef");
+                                    
+                                        ResultSet resultS = preparedStatement5.executeQuery();
+                                        while (result.next()) {
+                                            System.out.printf(" - Impressão dos Chefs ");
+                                            Chef chef = new Chef(
+                                                result.getInt("IdChef"),
+                                                result.getString("nome"),
+                                                result.getString("cpf"),
+                                                result.getDate("dataNascimento"),
+                                                result.getString("cargo"),
+                                                result.getString("especialidade"));
+                                            System.out.println(chef);
+                                        }
+                                        System.out.printf(" \n");
+
                         Padaria padariaUm = new Padaria(1, "Padaria do Seu Zé", "27/06/1991",
                                 "08h às 18h", "Perto da Millium", "89227-437",
                                 "Rua das Palmeiras", 999, "Jardim Paraíso", "Joinville");
@@ -626,11 +663,11 @@ public class SistemaPadaria {
                         }
                         System.out.println("\n");
                         break;
-                
-                case 4:
-                System.out.println("\n\n Obrigado por usar o programa! ");
-                break;
-            }
+
+                    case 4:
+                        System.out.println("\n\n Obrigado por usar o programa! ");
+                        break;
+                }
             } while (escolhaPrincipal != 4);
             con.close();
         } catch (SQLException e) {
